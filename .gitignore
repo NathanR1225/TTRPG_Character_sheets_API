@@ -1,23 +1,53 @@
-*.log
-/.env
-.env
-env
-*.env
-env*
-.env*
-.DS_Store
-vendor/
+# Binaries
 *.exe
 *.exe~
 *.dll
 *.so
 *.dylib
+
+# Test binary, coverage, and profiling
 *.test
 *.out
-coverage.*
-*.coverprofile
-profile.cov
+*.cover
+coverage.out
+
+# Go workspace files
 go.work
 go.work.sum
+
+# Dependency directories (if used)
+vendor/
+
+# IDE/editor files
 .vscode/
 .idea/
+*.swp
+*.swo
+*~
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+
+# Environment variables
+.env
+
+# Build output
+bin/
+dist/
+
+# Temporary files
+tmp/
+temp/
+
+# Go build cache (optional, usually not needed)
+.cache/
+
+# Docker (optional, if used)
+*.tar
+
+# Misc
+*.pid
