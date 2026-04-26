@@ -50,6 +50,10 @@ func main() {
 
 	//located in sheetList.go
 	router.GET("/getSheetList", func(c *gin.Context) { getSheetList(c, db) })
+	//located in sheetInfo.go
+	router.POST("/getAttributesAndSkills", func(c *gin.Context) {
+		getAttributesAndSkills(c, db)
+	})
 
 	router.Run("localhost:1213")
 }
