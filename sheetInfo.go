@@ -59,8 +59,10 @@ func getAttributesAndSkills(c *gin.Context, db *sql.DB) {
 		i.skills = getSkills(i.RecId,db)
 		attributes = append(attributes, i)
 	}
-
-	c.IndentedJSON(http.StatusOK, attributes)
+	log.Print(" attributes",  attributes)
+	
+	c.JSON(http.StatusOK, gin.H{"attributes":attributes})
+	log.Print(" done")
 }
 
 func getSkills(ParentAttributeId int, db *sql.DB) []skill {
@@ -84,6 +86,5 @@ func getSkills(ParentAttributeId int, db *sql.DB) []skill {
 		}
 		skills = append(skills, s)
 	}
-	log.Print("skills", skills)
 	return skills
 }
